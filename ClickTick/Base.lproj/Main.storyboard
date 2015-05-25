@@ -15,8 +15,57 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcN-QT-4dH">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Click">
+                                    <color key="titleColor" red="0.91764712333679199" green="0.074509806931018829" blue="0.11372549831867218" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="177" y="298" width="35" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="incrementCount" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Vlp-d9-Reh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nN5-Az-hw6">
+                                <rect key="frame" x="279" y="110" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="181" y="112" width="39" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16078431904315948" green="0.81568634510040283" blue="0.81568634510040283" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="TcN-QT-4dH" secondAttribute="centerX" id="Aei-Gn-RBQ"/>
+                            <constraint firstAttribute="centerY" secondItem="TcN-QT-4dH" secondAttribute="centerY" id="rdh-a1-Tmb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="TcN-QT-4dH"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Aei-Gn-RBQ"/>
+                                <exclude reference="rdh-a1-Tmb"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="TcN-QT-4dH"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Aei-Gn-RBQ"/>
+                                <include reference="rdh-a1-Tmb"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="nN5-Az-hw6" id="2ZB-HC-za0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
